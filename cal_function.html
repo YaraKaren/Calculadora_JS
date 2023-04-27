@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora com function</title> 
+<meta charset="utf-8">
+</head> 
+<body> 
+    
+    <form name="Entrada" onsubmit="return validarFormulario()" method="post"style="text-align: center; margin-top: 90px;">
+    
+    <h1>Calculadora</h1>
+    <label>Informe o Primeiro Número:</label>
+        <input id="num1"><br>
+    <label>Informe o Segundo Número:</label>
+        <input type="text" id="num2">
+    <br><br>
+   </form>    
+    
+        <div style="text-align: center;">
+        <button onclick="somar()">+</button>
+        <button onclick="subt()">-</button>
+        <button onclick="multi()">x</button>
+        <button onclick="divi()">÷</button>
+        </div>
+    <br>
+   
+    <center><label>Resultado:</label>
+    <span id="result"></span></center>
+
+<script>
+    
+    function somar() {
+
+      //document.getElementById("num1").value serve para capturar o resultado/variavel do html e consigo colocar no javascript.
+
+      var num1 = parseFloat(document.getElementById("num1").value);
+
+      var num2 = parseFloat(document.getElementById("num2").value);
+
+      var resultado = num1 + num2;
+
+      document.getElementById("result").innerHTML = resultado;
+
+    }
+
+    
+
+    function subt() {
+
+      var num1 = parseFloat(document.getElementById("num1").value);
+
+      var num2 = parseFloat(document.getElementById("num2").value);
+
+      var resultado = num1 - num2;
+
+      document.getElementById("result").innerHTML = resultado;
+
+    }
+
+    
+
+    function multi() {
+
+      var num1 = parseFloat(document.getElementById("num1").value);
+
+      var num2 = parseFloat(document.getElementById("num2").value);
+
+      var resultado = num1 * num2;
+
+      document.getElementById("result").innerHTML = resultado;
+
+    }
+
+    
+
+    function divi() {
+
+      var num1 = parseFloat(document.getElementById("num1").value);
+
+      var num2 = parseFloat(document.getElementById("num2").value);
+
+      var resultado = num1 / num2;
+
+      document.getElementById("result").innerHTML = resultado;
+
+    }
+</script>
+
+</form>
+</body> 
+</html> 
